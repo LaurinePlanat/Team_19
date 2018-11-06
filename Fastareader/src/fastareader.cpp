@@ -49,12 +49,12 @@ std::string line, seq(""); //line = line of the file, we'll use it with a getlin
 }
 
 std::string Fastareader::readNucle(size_t a, size_t b) {
-	try {
+
+	if(!seqFound.empty()) {
 		nucle = seqFound.substr(a,b);
-		return nucle;
-	} catch (std::out_of_range &e) {
-		throw(std::runtime_error(std::string("Error ") + e.what()));
-	}
+	} else { std::cerr << "SEQUENCE NOT FOUND" << std::endl; }
+		
+	return nucle;
 }
 
 void Fastareader::displayNucle() const {
