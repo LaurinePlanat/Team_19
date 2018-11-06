@@ -43,6 +43,7 @@ std::string line, seq(""); //line = line of the file, we'll use it with a getlin
 	} else {
 		std::cerr << "The file has not been found, don't forget to give the program the right path !" << std::endl;
 	}
+	if (seq.empty()) std::cerr << "NO SEQUENCE FOUND" << std::endl;
 	setFound(seq);
 	file.close();
 	return seq;
@@ -52,8 +53,7 @@ std::string Fastareader::readNucle(size_t a, size_t b) {
 
 	if(!seqFound.empty()) {
 		nucle = seqFound.substr(a,b);
-	} else { std::cerr << "SEQUENCE NOT FOUND" << std::endl; }
-		
+	}	
 	return nucle;
 }
 
