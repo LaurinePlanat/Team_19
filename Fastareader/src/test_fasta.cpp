@@ -20,7 +20,10 @@ int main (int argc, char** argv) {
 	
 	std::string seq(reader.readSeq());
 	
+	std::string set2(reader.readNucle(3, 7));
+	
 	reader.display();
+	reader.displayNucle();
 
 	} else { 
         

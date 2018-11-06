@@ -50,11 +50,15 @@ std::string line, seq(""); //line = line of the file, we'll use it with a getlin
 
 std::string Fastareader::readNucle(size_t a, size_t b) {
 	try {
-		nucle = toSearch.substr(a,b);
+		nucle = seqFound.substr(a,b);
 		return nucle;
 	} catch (std::out_of_range &e) {
 		throw(std::runtime_error(std::string("Error ") + e.what()));
 	}
+}
+
+void Fastareader::displayNucle() const {
+	if(!nucle.empty()) std::cout << nucle << std::endl;
 }
 
 void Fastareader::display() const {

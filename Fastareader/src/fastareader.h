@@ -27,7 +27,8 @@ public:
 	void setFound(std::string found);
 	/*! Display the sequence we want*/
 	void display() const;
-
+	/*! Display the nucleotides we want to study*/
+	void displayNucle() const;
 
 private:
 	std::ifstream file;
