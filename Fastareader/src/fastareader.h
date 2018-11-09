@@ -4,7 +4,6 @@
 #include <sstream>
 #include <string>
 #include <fstream>
-#include <map>
 #include <iostream>
 
 class Fastareader {
@@ -32,9 +31,9 @@ public:
 
 private:
 	std::ifstream file;
-	std::string toSearch;
+	std::string toSearch; //Sequence we want to search
 	std::string nucle; //The nucleotides we want to read;
-	std::string seqFound;
+	std::string seqFound; //Sequence found
 
 
 };
