@@ -1,29 +1,22 @@
-#include "BEDreader.h" 
-#include <sstream> 
-#include <fstream> 
-#include <iostream>
-#include <vector>
+#include "BEDreader.h"
 
-using namespace std;
-
-bedreader::bedreader(string filename)
+bedreader::bedreader(std::string filename)
 : monfichier(filename)
- 
 {}
 
-void bedreader::setName(string nomEntre)
+void bedreader::setName(std::string nomEntre)
 {
 	nomCherche = nomEntre;
 }
 
 void bedreader::Read()
 {
-	string line;
-	ifstream myfile(monfichier);
-	
+	std::string line;
+	std::ifstream myfile(monfichier);
+
 	if(not(myfile.is_open()))
-	{ 
-		cout<<"Votre fichier n'a pas pu être lu."<<endl;
+	{
+		std::cout<<"Votre fichier n'a pas pu être lu."<<std::endl;
 	}
 	else
 	{
@@ -31,12 +24,11 @@ void bedreader::Read()
 		{
 			try {
 				myfile.exceptions(myfile.failbit | myfile.badbit); //Check if there is a problem concerning the reading of the file
-			    
+
 				getline(myfile,line);
-				string nom(nomCherche);
-				string delimiter = "	";
-				size_t pos = 0;
-				string token;
+				std::string delimiter = "	";
+				std::size_t pos = 0;
+				std::string token;
 
 					pos = line.find(delimiter);
 					token = line.substr(0, pos);
@@ -54,7 +46,7 @@ void bedreader::Read()
 						element.push_back(line);
 						lignes.push_back(element);
 						element.clear();
-					} 
+					}
 			} catch (std::ifstream::failure &e) {
 				if(!myfile.eof()) {
 					throw (std::runtime_error(std::string("Error ") + e.what())); //give the nature of the error that occurred
@@ -68,9 +60,9 @@ void bedreader::Read()
 			}
 	}
 	myfile.close();
-}	
+}
 
-vector<vector<string>>  bedreader::getlignes()
+std::vector<std::vector<std::string>>  bedreader::getlignes()
 {
 	return lignes;
 }

@@ -1,22 +1,22 @@
 
-#include <string> 
-#include <sstream> 
-#include <fstream> 
-#include "BEDreader.h" 
+#include <string>
+#include <sstream>
+#include <fstream>
+#include "BEDreader.h"
 #include <iostream>
 
 int main(int argc, char** argv)
 {
 	bedreader myReader(argv[1]);
-	vector<vector<string>> ligne;
-	string concatenefichier("");
+	std::vector<std::vector<std::string>> ligne;
+	std::string concatenefichier("");
 	if (argc<3)
 	{
-		cout<<"Nombre d'arguments incorrect. Veuillez entrer un nom de fichier et un nom de séquence"<<endl;
+		std::cout<<"Nombre d'arguments incorrect. Veuillez entrer un nom de fichier et un nom de séquence"<<std::endl;
 	}
 	else
 	{
-		string fichier(argv[2]);
+		std::string fichier(argv[2]);
 		concatenefichier = fichier;
 		if (argc>3)
 		{
@@ -26,18 +26,18 @@ int main(int argc, char** argv)
 				concatenefichier=concatenefichier+espace+argv[i];
 			}
 		}
-	
+
 		myReader.setName(concatenefichier);
 		myReader.Read();
 		ligne=myReader.getlignes();
-		for(size_t i(0);i<ligne.size();++i)
+		for(std::size_t i(0);i<ligne.size();++i)
 		{
-			for(size_t k(0);k<ligne[i].size();++k)	
+			for(std::size_t k(0);k<ligne[i].size();++k)
 			{
-				cout<<ligne[i][k]<<endl;
+				std::cout<<ligne[i][k]<<std::endl;
 			}
 		}
 	}
 return 0;
-	
+
 }
