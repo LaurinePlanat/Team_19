@@ -29,6 +29,7 @@ int main(int argc, char** argv)
 
 		myReader.setName(concatenefichier);
 		myReader.Read();
+		myReader.FindAndParse();
 		ligne=myReader.getlignes();
 		for(std::size_t i(0);i<ligne.size();++i)
 		{

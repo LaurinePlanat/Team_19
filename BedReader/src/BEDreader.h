@@ -19,6 +19,7 @@ class bedreader
 	std::string nomCherche;
 	std::vector<std::vector<std::string>> lignes;
 	std::vector<std::string> element;
+	std::vector<std::string> fichier_entier;
 
 
 
@@ -28,8 +29,11 @@ class bedreader
 		@param[in] the name of the file given by the user */
 	bedreader(std::string filename);
 
-	/*! Reads the file and stocks the elements corresponding to the sequence name given by the user in a vector<vector<string>> */
+	/*! Reads the file and stocks the lines in avector<string> */
 	void Read();
+
+	/*! Stocks the elements corresponding to the sequence name given by the user in a vector<vector<string>> */
+	void FindAndParse();
 
 	/*! Sets the name of the sequence the user is looking for.
 		@param[in] the name of the sequence the user is looking for */
