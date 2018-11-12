@@ -26,7 +26,7 @@ void bedreader::Read()
 				myfile.exceptions(myfile.failbit | myfile.badbit); //Check if there is a problem concerning the reading of the file
 
 				getline(myfile,line);
-				std::string delimiter = "	";
+				std::string delimiter = "\t";
 				std::size_t pos = 0;
 				std::string token;
 
