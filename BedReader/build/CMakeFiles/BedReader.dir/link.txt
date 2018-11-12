@@ -1,1 +1,0 @@
-/Library/Developer/CommandLineTools/usr/bin/c++  -W -Wall -pedantic -std=c++11 -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/BedReader.dir/src/main.cpp.o CMakeFiles/BedReader.dir/src/BEDreader.cpp.o  -o BedReader 
