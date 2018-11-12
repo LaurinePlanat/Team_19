@@ -66,7 +66,10 @@ void bedreader::FindAndParse()
 				lignes.push_back(element);
 				element.clear();
 		}
+<<<<<<< HEAD
 	}
+=======
+>>>>>>> 91b26d0611123496dd4d3fc98ca4a97a7132bc9e
 	if(lignes.size()==0)
 		{
 			std::cout << "Aucune séquence de ce nom n'a été trouvée" << std::endl;
