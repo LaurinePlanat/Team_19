@@ -6,29 +6,21 @@
 
 #IncludeRegexTransform: 
 
-/Users/Quentin/Documents/Cours/EPFL/Informatique/Projets/Projet Prog/Team_19/BedReader/src/BEDreader.h
-string
--
-vector
--
-sstream
--
-fstream
--
-iostream
--
-vector
--
-
-/Users/Quentin/Documents/Cours/EPFL/Informatique/Projets/Projet Prog/Team_19/BedReader/src/main.cpp
-string
--
-sstream
--
-fstream
--
+/Users/Quentin/Documents/Cours/EPFL/Informatique/Projets/Projet Prog/Team_19/BedReader/src/BEDreader.cpp
 BEDreader.h
 /Users/Quentin/Documents/Cours/EPFL/Informatique/Projets/Projet Prog/Team_19/BedReader/src/BEDreader.h
+
+/Users/Quentin/Documents/Cours/EPFL/Informatique/Projets/Projet Prog/Team_19/BedReader/src/BEDreader.h
+string
+-
+vector
+-
+sstream
+-
+fstream
+-
 iostream
+-
+vector
 -
 

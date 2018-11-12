@@ -65,10 +65,10 @@ void bedreader::FindAndParse()
 				element.push_back(fichier_entier[i]);
 				lignes.push_back(element);
 				element.clear();
+		}
 	}
 	if(lignes.size()==0)
 		{
 			std::cout << "Aucune séquence de ce nom n'a été trouvée" << std::endl;
 		}
-	}
 }
